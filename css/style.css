@@ -1,0 +1,274 @@
+/* https://github.com/tthkit2020/CSS-Grid-Responsive-Task */
+/* Trick Or Treat Color Scheme Used */
+
+:root {
+    --main-padding: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    padding: 0.5rem;
+}
+
+.container {
+    height: 100vh;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.6fr 3fr 1.5fr 1.5fr 1.5fr;
+    grid-template-areas:
+    "header aboutus services contactus"
+    "main main main main"
+    "hero1 hero2 hero3 gallery"
+    "hero1 hero2 hero3 extra"
+    "banner banner banner banner"
+}
+
+.heading {
+    font-size: 2rem;
+}
+
+header {
+    background: #171615;
+    padding: var(--main-padding);
+    grid-area: header;
+    transition: 0.6s;
+}
+
+#aboutus {
+    background: #171615;
+    padding: var(--main-padding);
+    grid-area: aboutus;
+    transition: 0.6s;
+}
+
+#hero1, #hero2, #hero3 {
+    background: #EB6123;
+    padding: var(--main-padding);
+    border: 0.5px solid white;
+}
+
+#hero1 {
+    grid-area: hero1;
+}
+
+#hero2 {
+    grid-area: hero2;
+}
+
+#hero3 {
+    grid-area: hero3;
+}
+
+main {
+    background: #C03C09;
+    padding: var(--main-padding);
+    grid-area: main;
+}
+
+#gallery {
+    background:#67A032;
+    padding: var(--main-padding);
+    grid-area: gallery;
+    border: 0.5px solid white;
+}
+
+#extra {
+    background:#5F2B93;
+    padding: var(--main-padding);
+    grid-area: extra;
+    border: 0.5px solid white;
+}
+
+#banner {
+    background: #F5CD08;
+    padding: var(--main-padding);
+    grid-area: banner;
+}
+
+#services {
+    background: #171615;
+    padding: var(--main-padding);
+    grid-area: services;
+    transition: 0.6s;
+}
+
+#contactus {
+    background: #171615;
+    padding: var(--main-padding);
+    grid-area: contactus;
+    transition: 0.6s;
+}
+
+#contactus a, #services a, header a, #aboutus a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) { /* I-Pad */ 
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 0.6fr 2fr 1fr 1.5fr 1.5fr 1.5fr;
+        grid-template-areas:
+        "header aboutus services"
+        "contactus main main"
+        "hero1 main main"
+        "hero2 main main"
+        "hero3 extra gallery"
+        "banner banner banner"
+    }
+
+    #padding, #s-padding {
+        padding: 0.2rem;
+    }
+
+    #c-padding {
+        padding: 1.5rem;
+    }
+
+    main, header, #aboutus, #contactus, #services {
+        border: 0.5px solid white;
+    }
+}
+
+@media (max-width: 550px) { /* Regular Phone */ 
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.9fr 0.9fr 3.5fr 3fr 2fr 2fr 2fr 2fr;
+        grid-template-areas:
+        "header aboutus"
+        "services contactus"
+        "hero1 hero2"
+        "hero3 hero3"
+        "main main"
+        "gallery gallery"
+        "extra extra"
+        "banner banner"
+    }
+
+    main {
+        border: 0.5px solid white;
+    }
+
+    #c-padding, #s-padding {
+        padding: 0.1rem;
+    }
+    .heading {
+        font-size: 1.4rem;
+    }
+}
+
+.btn1 {
+    border: 3px solid #4CAF50;
+    background-color:#5F2B93; /* Green */
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+
+.btn1:hover {
+    border: 3px solid red;
+    transform: scale(1.1);
+    background-color: #F5CD08;
+    color: white;
+}
+
+.btn2:hover {
+    border: 3px solid red;
+    transform: scale(1.1);
+    background-color: #F5CD08;
+    color: white;
+}
+
+.btn3:hover {
+    border: 3px solid red;
+    transform: scale(1.1);
+    background-color: #F5CD08;
+    color: white;
+}
+
+.btn4:hover {
+    border: 3px solid red;
+    background-color: #5F2B93;
+    color: white;
+}
+
+.btn2 {
+    border: 3px solid #4CAF50;
+    background-color: #5F2B93; /* Green */
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+
+.btn3 {
+    border: 3px solid #4CAF50;
+    background-color: #5F2B93; /* Green */
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+
+.btn4 {
+    border: 3px solid #5F29B3;
+    background-color: #F5CD08; /* Green */
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+}
+
+.social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: purple;
+    font-size: 1.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    transition: 0.4s;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    background-color: red;
+    color: #67A032;
+}
+
+header:hover, #aboutus:hover, #contactus:hover,#services:hover {
+    background-color: #5F2B93;
+}
+
+#aboutus a:hover, header a:hover, #contactus a:hover, #services a:hover {
+    color: #67A032;
+}
